@@ -1,11 +1,13 @@
 const API = "https://dummyjson.com/users";
 const table = document.getElementById("userTable");
+const loader = document.getElementById("loader");
 let users = [];
 let editId = null;
 
 
 // Get User data
 async function getUsers() {
+  loader.classList.remove('hidden');
   try {
     const res = await fetch(API);
     const data = await res.json();
@@ -14,6 +16,7 @@ async function getUsers() {
   } catch (err) {
     alert('Error fetching users');
   }
+  loader.classList.add('hidden');
 }
 
 function renderUsers(data) {
