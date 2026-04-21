@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Management App</title>
+  <link href="/css/main.css" rel="stylesheet">
+  <link href="./css/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 p-4">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4">User Management</h1>
+
+    <form id="userForm" class="bg-white p-4 rounded shadow mb-6">
+      <div class="grid grid-cols-2 gap-4">
+        <input type="text" id="firstName" placeholder="First Name" class="border p-2 rounded" required>
+        <input type="text" id="lastName" placeholder="Last Name" class="border p-2 rounded" required>
+        <input type="email" id="email" placeholder="Email" class="border p-2 rounded" required>
+        <input type="text" id="phone" placeholder="Phone" class="border p-2 rounded" required>
+      </div>
+      <button class="bg-green-500 text-white px-4 py-2 rounded mt-4">Add User</button>
+    </form>
+
+    <input type="text" id="search" placeholder="Search user..." class="border w-full p-2 rounded mb-4">
+
+    <div class="bg-white rounded shadow overflow-x-auto">
+      <table class="w-full text-left">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="p-2">ID</th>
+            <th class="p-2">First Name</th>
+            <th class="p-2">Last Name</th>
+            <th class="p-2">Email</th>
+            <th class="p-2">Phone</th>
+            <th class="p-2">Action</th>
+          </tr>
+        </thead>
+        <tbody id="userTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+
+</html>
