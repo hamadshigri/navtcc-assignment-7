@@ -1,8 +1,7 @@
 # Navtcc Assignment 7
 
 # 1. User Management App
-
-- Add, edit, delete users
+- Full CRUD (Create, Read, Update, Delete)
 - Built with HTML, TailwindCSS & JavaScript
 
 # Deployed On Vercel:
