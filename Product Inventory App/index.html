@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Inventory App</title>
+  <link href="./output.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-100">
+  <div class="w-[70%] m-auto">
+    <h1 class="text-3xl font-bold p-2 text-center mt-4">Product Inventory</h1>
+    <form id="productForm" class="bg-white mt-4 p-4 rounded">
+      <div class="grid grid-cols-2 gap-4">
+        <input type="text" id="title" placeholder="Title" class="border p-2" required>
+        <input type="number" id="price" placeholder="Price" class="border p-2" required>
+        <input id="image" placeholder="Image URL" class="border p-2 rounded" required>
+        <input type="text" id="category" placeholder="Category" class="border p-2" required>
+      </div>
+      <div class="grid grid-cols-1 gap-4 m-auto mt-4">
+        <textarea id="description" placeholder="Description" rows="3" class="border p-2" required></textarea>
+      </div>
+      <button class="bg-yellow-500 w-full mt-4 p-2 rounded font-bold text-xl hover:bg-black  hover:text-white cursor-pointer">Save Product</button>
+    </form>
+
+    <div class="mt-4">
+      <select id="filter" class="bg-white p-2 rounded">
+        <option value="">All Categories</option>
+        <option value="electronics">Electronics</option>
+        <option value="jewelery">Jewelery</option>
+        <option value="men's clothing">Men's Clothing</option>
+        <option value="women's Clothing">Women's Clothing</option>
+      </select>
+    </div>
+
+    <div id="loader" class="hidden text-center">Loading...</div>
+
+    <div id="products" class="grid md:grid-cols-3 gap-4 mt-4"></div>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
